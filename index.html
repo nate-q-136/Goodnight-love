@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trái tym rơi xuống</title>
+    <style>
+      body {
+        background-color: #f1f1f1;
+      }
+
+      .heart-2{
+        position: absolute;
+        top:0px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url('heart.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: fall 1s infinite linear;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      @keyframes fall {
+        0% {
+          top: 0px;
+          opacity: 1;
+          transform: rotate(0deg) scale(1);
+        
+        }
+        25%{
+          opacity: 0.9;
+          transform: rotate(20deg) scale(0.8);
+        }
+        50%{
+          opacity: 0.8;
+          transform: rotate(40deg) scale(0.6);
+        }
+        100% {
+          top: 100%;
+          opacity: 0;
+          transform: rotate(360deg) scale(0.35);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <!-- <button onclick="createHearts()">Nhấn vào đây!</button> -->
+    <div id="wrapper">
+        <div class="content">
+          <div class="first-name">Nhat</div>
+          <div class="heart"></div>
+          <div class="last-name">Anh</div>
+          <div class="clearfix"></div>
+        </div>
+        
+        <div class="love-button">Click Here</div>
+        <div class="clearfix"></div>
+        <div class="goodnight-text">&#128580 Goodnight My Cuc Cung &#128522</div>
+        <div class="source">
+          <img id="image-1" src="nhatanh1.jpg" alt="Ảnh 1" class="rounded">
+          <video id="myVideo" src="nhatanhvid.mp4" controls class="rounded"></video>
+          <img id="image-2" src="nhatanh2.jpg" alt="Ảnh 2" class="rounded">
+          <audio id="myAudio" src="y2mate.com - You and Me on the Landline feat Mina Delro (mp3cut.net).mp3" controls autoplay></audio>
+        </div>
+        <div class="music"></div>
+        
+      </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>

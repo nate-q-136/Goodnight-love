@@ -1,0 +1,252 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/handwriting');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vw;
+    background:white;
+
+}
+
+#wrapper{
+    /* border:5px solid black;  */
+    margin-top: 500px;
+    display: inline;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.heart{
+    background-image: url('heart.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.heart{
+    /* float: left; */
+    fill: red;
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 30px;
+    border-width: 10px;
+    border-image: linear-gradient(to right, #ff0000, #0000ff) 1;
+    animation:pulse 1s ease infinite;
+}
+
+.first-name, .last-name{
+    display: inline-block;
+    font-size:5vw;
+    color:#252839;
+    -webkit-text-stroke: 0.1vw #383d52;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff0000, #0000ff); /* Gradient màu */
+    -webkit-background-clip: text; /* Áp dụng gradient cho chữ */
+    -webkit-text-fill-color: transparent; /* Đặt màu chữ là mờ (transparent) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Đổ bóng chữ */
+}
+
+
+.first-name{
+    /* float: left; */
+    margin:30px 30px 0px 30px;
+}
+.last-name{
+    /* float: right; */
+    margin:30px 30px 0px 30px;
+}
+.first-name{
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+
+}
+.last-name{
+
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+}
+
+.love-button {
+    position: relative;
+    float: left;
+    display: inline;
+    margin-top: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    left: 50vw;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 700;
+    background: linear-gradient(to right, #7a48b6, #d41f8c); /* Gradient cho background */
+    -webkit-background-clip: text; /* Áp dụng gradient cho màu chữ */
+    -webkit-text-fill-color: transparent; /* Đặt màu chữ thành trong suốt */
+}
+
+.love-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f3260b, #d8c21a); /* Gradient cho màu chữ */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.source{
+    display: flex;
+    margin-top: 100px;
+    justify-content:space-around;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
+@keyframes border-slide{
+    0%{
+        transform: translateY(-100%);
+    }
+    25%{
+        transform: translateY(-50%);
+    }
+    50%{
+
+    }
+    75%{
+
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.love-button::after{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: linear-gradient(to right, #ed72b6, #ab17be);
+    animation: border-slide 2s linear infinite;
+    z-index: -2;
+}
+
+.love-button:hover{
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(0.5);
+    }    
+    25%{
+        transform: scale(0.75);
+    }
+    75%{
+        transform: scale(1)
+    }
+    100%{
+        transform: scale(0.5)
+    }
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }    
+    25%{
+        transform: scale(1.5);
+    }
+    75%{
+        transform: scale(1.25)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+#heart-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.goodnight-text {
+    font-family: 'Handwriting', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+  
+
+  @keyframes falling {
+    0% {
+      transform: translateX(-50%) translateY(-50px) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translateX(-50%) translateY(100vw) rotate(720deg) scale(0.2);
+      opacity: 0;
+    }
+  }
+  
+.rounded{
+    border-radius: 50%;
+}
+img,video{
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+}
+video{
+    transform: rotate(-90deg);
+}
+
+#overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    
+}
+.hidden{
+    display: none !important;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
